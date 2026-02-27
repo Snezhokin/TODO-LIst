@@ -23,3 +23,7 @@ def update_task(todo_list, task_id , new_title):
         if task["id"] == task_id:
             task["title"] = new_title
             break
+
+todo_list = [{'id' : 1 , 'title' : 'Learn Python' , 'completed' : False}]
+update_task(todo_list, 1 , "Repeat Python")
+print(todo_list)
