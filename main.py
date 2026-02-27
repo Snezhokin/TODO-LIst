@@ -27,3 +27,9 @@ def update_task(todo_list, task_id , new_title):
 todo_list = [{'id' : 1 , 'title' : 'Learn Python' , 'completed' : False}]
 update_task(todo_list, 1 , "Repeat Python")
 print(todo_list)
+
+def complete_task(todo_list , task_id):
+    for task in todo_list:
+        if task["id"] == task_id:
+            task["completed"] = True
+            break
