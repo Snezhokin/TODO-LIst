@@ -12,3 +12,5 @@ def add_task(todo_list , title):
         "title" : title,
         "completed" : False
     }
+
+todo_list.append(task)
