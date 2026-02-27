@@ -34,6 +34,6 @@ def complete_task(todo_list , task_id):
             task["completed"] = True
             break
 
-task["completed"] = [{'id' : 1 ,'title' : 'Repeat Python', 'completed' : False }]
+todo_list = [{'id' : 1 ,'title' : 'Repeat Python', 'completed' : False }]
 complete_task(todo_list , 1)
 print(todo_list)
