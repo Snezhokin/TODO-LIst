@@ -13,4 +13,7 @@ def add_task(todo_list , title):
         "completed" : False
     }
 
-todo_list.append(task)
+    todo_list.append(task)
+
+add_task(todo_list , "Learn Python")
+print(todo_list)
