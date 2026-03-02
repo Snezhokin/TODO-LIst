@@ -79,3 +79,11 @@ def count_tasks(todo_list):
     completed_tasks = sum(1 for task in todo_list if task["completed"])
     incomplete_tasks = len(todo_list) - completed_tasks
     return completed_tasks , incomplete_tasks
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python' , 'completed' : True},
+    {'id' : 2 , 'title' : 'Test the code'}
+]
+
+completed , incomplete = count_tasks(todo_list)
+print(f"Completed tasks: {completed} , Incomplete tasks: {incomplete}")
