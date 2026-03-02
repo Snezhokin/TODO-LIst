@@ -37,3 +37,14 @@ def complete_task(todo_list , task_id):
 todo_list = [{'id' : 1 ,'title' : 'Repeat Python', 'completed' : False }]
 complete_task(todo_list , 1)
 print(todo_list)
+
+
+def delete_task(todo_list, task_id):
+    for task in todo_list:
+        if task['id']== task_id:
+            todo_list.remove(task)
+            break
+
+todo_list = [{'id': 1 , 'title' : 'Repeat Python' , 'completed' : True}]
+delete_task(todo_list , 1)
+print(todo_list)
