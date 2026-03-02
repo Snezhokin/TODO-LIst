@@ -74,3 +74,8 @@ todo_list = [
 
 result = search_incomplete_tasks(todo_list)
 print(result)
+
+def count_tasks(todo_list):
+    completed_tasks = sum(1 for task in todo_list if task["completed"])
+    incomplete_tasks = len(todo_list) - completed_tasks
+    return completed_tasks , incomplete_tasks
