@@ -57,7 +57,7 @@ def search_tasks(todo_list , query):
 
 todo_list = [
     {'id' : 1 , 'title' : 'Learn Python', 'completed' : True},
-    {'id' : 2 , 'title' : 'test the code' , 'completed' : False}
+    {'id' : 2 , 'title' : 'Test the code' , 'completed' : False}
 ]
 
 result = search_tasks(todo_list, "Pyhton")
@@ -65,3 +65,12 @@ print(result)
 
 def search_incomplete_tasks(todo_list):
     return [ task for task in todo_list if not task["completed"]]
+
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python' , 'completed' : True},
+    {'id' : 2 , 'title' : 'Test the code'}
+]
+
+result = search_incomplete_tasks(todo_list)
+print(result)
