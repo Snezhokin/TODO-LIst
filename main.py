@@ -54,3 +54,11 @@ def search_tasks(todo_list , query):
         task for task in todo_list
           if query.lower() in task["title"].lower() 
     ]
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python', 'completed' : True},
+    {'id' : 2 , 'title' : 'test the code' , 'completed' : False}
+]
+
+result = search_tasks(todo_list, "Pyhton")
+print(result)
