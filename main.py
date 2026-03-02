@@ -48,3 +48,9 @@ def delete_task(todo_list, task_id):
 todo_list = [{'id': 1 , 'title' : 'Repeat Python' , 'completed' : True}]
 delete_task(todo_list , 1)
 print(todo_list)
+
+def search_tasks(todo_list , query):
+    return [ 
+        task for task in todo_list
+          if query.lower() in task["title"].lower() 
+    ]
