@@ -62,3 +62,6 @@ todo_list = [
 
 result = search_tasks(todo_list, "Pyhton")
 print(result)
+
+def search_incomplete_tasks(todo_list):
+    return [ task for task in todo_list if not task["completed"]]
