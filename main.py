@@ -37,3 +37,53 @@ def complete_task(todo_list , task_id):
 todo_list = [{'id' : 1 ,'title' : 'Repeat Python', 'completed' : False }]
 complete_task(todo_list , 1)
 print(todo_list)
+
+
+def delete_task(todo_list, task_id):
+    for task in todo_list:
+        if task['id']== task_id:
+            todo_list.remove(task)
+            break
+
+todo_list = [{'id': 1 , 'title' : 'Repeat Python' , 'completed' : True}]
+delete_task(todo_list , 1)
+print(todo_list)
+
+def search_tasks(todo_list , query):
+    return [ 
+        task for task in todo_list
+          if query.lower() in task["title"].lower() 
+    ]
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python', 'completed' : True},
+    {'id' : 2 , 'title' : 'Test the code' , 'completed' : False}
+]
+
+result = search_tasks(todo_list, "Pyhton")
+print(result)
+
+def search_incomplete_tasks(todo_list):
+    return [ task for task in todo_list if not task["completed"]]
+
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python' , 'completed' : True},
+    {'id' : 2 , 'title' : 'Test the code'}
+]
+
+result = search_incomplete_tasks(todo_list)
+print(result)
+
+def count_tasks(todo_list):
+    completed_tasks = sum(1 for task in todo_list if task["completed"])
+    incomplete_tasks = len(todo_list) - completed_tasks
+    return completed_tasks , incomplete_tasks
+
+todo_list = [
+    {'id' : 1 , 'title' : 'Learn Python' , 'completed' : True},
+    {'id' : 2 , 'title' : 'Test the code'}
+]
+
+completed , incomplete = count_tasks(todo_list)
+print(f"Completed tasks: {completed} , Incomplete tasks: {incomplete}")
